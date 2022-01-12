@@ -4,7 +4,8 @@
   "description": "",
   "main": "ulbi/test.js",
   "scripts": {
-    "start": "node ./ulbi/lessons/process.js"
+    "start": "nodemon ./ulbi/index.js",
+    "dev": "nodemon ./minin/index.js"
   },
   "author": "",
   "license": "ISC",
