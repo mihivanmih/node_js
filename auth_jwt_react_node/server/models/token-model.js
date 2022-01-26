@@ -6,4 +6,4 @@ const TokenSchema = new Schema({
     refreshToken: {type: String, required: true}
 })
 
-export default model('User', UserSchema)
+export default model('tokenModel', TokenSchema)
