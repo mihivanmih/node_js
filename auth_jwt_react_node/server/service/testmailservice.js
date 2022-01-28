@@ -1,22 +1,31 @@
-require('dotenv').config()
-const nodemailer = require('nodemailer')
+import dotenv from 'dotenv'
+dotenv.config({ path: '../.env' })
 
-//console.log( process.env.SMTP_USER)
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD
-    }
-})
+import nodemailer from 'nodemailer'
 
-const mailOptions = {
-    from: process.env.SMTP_USER,
-    to: 'studiesmihailov@yandex.ru',
-    subject: 'Активация аккаунта на ' + process.env.API_URL,
-    text: 'Текст письма'
-}
+console.log( process.env.SMTP_USER)
 
-transporter.sendMail(mailOptions)
+// const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: process.env.SMTP_USER,
+//         pass: process.env.SMTP_PASSWORD
+//     }
+// })
+//
+// const mailOptions = {
+//     from: process.env.SMTP_USER,
+//     to: 'studiesmihailov@yandex.ru',
+//     subject: 'Активация аккаунта на ' + process.env.API_URL,
+//     text: '',
+//     html: `
+//                 <div>
+//                     <h1>Для активации перейдите по ссылке</h1>
+//                     <a href="gggg">rrrr</a>
+//                 </div>
+//             `
+// }
+//
+// transporter.sendMail(mailOptions)
 

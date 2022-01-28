@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import nodemailer from 'nodemailer'
 
 class MailService {
@@ -22,7 +24,7 @@ class MailService {
             text: '',
             html: `
                 <div>
-                    <h1>Для активации перейдите по ссылке</h1>
+                    <h1>Для активации перейдите по ссылке и сожгите это письмо</h1>
                     <a href="${link}">${link}</a>
                 </div>
             `
